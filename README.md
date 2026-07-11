@@ -1,13 +1,14 @@
 <div align="center">
 
-# KMeansClustering
+# K-Means Clustering
 
-**Manual implementation of the K-Means Clustering algorithm from scratch using NumPy.**
+### Manual implementation from scratch and implementation using Scikit-learn
 
-![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge\&logo=python)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge\&logo=numpy)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-ffffff?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-In%20Progress-orange?style=for-the-badge)
+<img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+<img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white"/>
+<img src="https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white"/>
+<img src="https://img.shields.io/badge/Status-Completed-success?style=for-the-badge"/>
 
 </div>
 
@@ -15,20 +16,58 @@
 
 # Overview
 
-This project focuses on implementing the **K-Means Clustering** algorithm completely from scratch without using machine learning libraries.
+This project explores the **K-Means Clustering** algorithm through two different approaches.
 
-The objective is to understand every step of the algorithm, from assigning data points to the nearest centroid to updating centroid positions until convergence.
+The first notebook contains a complete **manual implementation** of the algorithm using only **NumPy**, while the second notebook demonstrates how to solve the same problem using **Scikit-learn**.
 
-A **scikit-learn implementation** will be added in a future update.
+The objective of this project was to first understand how K-Means works internally and then learn how to use its optimized implementation in Scikit-learn.
 
 ---
 
-# Project Goals
+# Repository Structure
 
-* Understand how K-Means works internally.
-* Implement the algorithm using only NumPy.
-* Visualize clustering results.
-* Build a strong understanding of unsupervised learning.
+```text
+KMeansClustering/
+│
+├── images/
+│
+├── K_mean_clustering.ipynb
+│   └── Manual implementation of K-Means
+│
+├── Kmean_sklearn.ipynb
+│   └── Scikit-learn implementation
+│
+└── README.md
+```
+
+---
+
+# Manual Implementation
+
+The manual implementation includes:
+
+- Random centroid initialization
+- Euclidean distance calculation
+- Assigning each point to its nearest centroid
+- Updating centroid locations
+- Iterative optimization until convergence
+- Handling empty clusters
+- Testing on multiple datasets
+- Cluster visualization
+
+---
+
+# Scikit-learn Implementation
+
+The Scikit-learn notebook demonstrates:
+
+- Creating a `KMeans` model
+- Training using `fit()`
+- Predicting cluster labels
+- Accessing centroid positions
+- Visualizing the final clusters
+- Selecting the optimal number of clusters using the **Elbow Method**
+- Evaluating clustering quality using the **Silhouette Score**
 
 ---
 
@@ -58,66 +97,54 @@ Converged?
 
 ---
 
-# Features
-
-* Manual implementation from scratch
-* Euclidean distance computation
-* Random centroid initialization
-* Cluster assignment
-* Centroid updates
-* Iterative optimization
-* Convergence detection
-* Cluster visualization
-
----
-
 # Technologies
 
-* Python
-* NumPy
-* Matplotlib
-
----
-
-# Project Structure
-
-```text
-KMeansClustering/
-│
-├── Manual/
-│   └── kmeans_manual.ipynb
-│
-├── Images/
-│
-└── README.md
-```
-
----
-
-# Future Updates
-
-* Add a scikit-learn implementation
-* Implement the Elbow Method
-* Experiment with different datasets
-* Explore different centroid initialization strategies
+- Python
+- NumPy
+- Matplotlib
+- Scikit-learn
 
 ---
 
 # What I Learned
 
-This project helped me better understand:
+Through this project I gained practical experience with:
 
-* Unsupervised learning
-* K-Means optimization
-* Euclidean distance
-* Cluster assignment
-* Centroid updates
-* Convergence criteria
-* Building machine learning algorithms from scratch
+- Unsupervised Learning
+- K-Means Clustering
+- Euclidean Distance
+- Cluster Assignment
+- Centroid Optimization
+- Convergence Detection
+- Random Initialization
+- Empty Cluster Handling
+- Elbow Method
+- Silhouette Analysis
+- Using Scikit-learn for clustering tasks
+
+---
+
+# Key Takeaways
+
+- Building K-Means from scratch provides a much deeper understanding of how the algorithm works.
+- Scikit-learn offers an efficient and highly optimized implementation with only a few lines of code.
+- The Elbow Method and Silhouette Score may recommend different values for **K**.
+- Choosing the best number of clusters should combine quantitative metrics with visualization and domain knowledge.
+
+---
+
+# Future Improvements
+
+Possible future extensions include:
+
+- K-Means++ initialization
+- Mini-Batch K-Means
+- PCA before clustering
+- Testing on larger real-world datasets
+- Performance comparison between implementations
 
 ---
 
 # License
 
-This repository is intended for educational purposes and personal learning.
-
+This repository was created for educational purposes and personal machine learning practice.
